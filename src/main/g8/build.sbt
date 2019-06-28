@@ -2,10 +2,11 @@ enablePlugins(SriPlatformPlugin)
 
 name := "$name$"
 
-scalaVersion := "2.12.4"
+scalaVersion := "2.12.8"
+crossScalaVersions := ("2.12.8", 2.13.0")
 
 lazy val versions = new {
-  val sri = "2017.12.28-RC"
+  val sri = "2019.06.26"
 }
 
 
@@ -17,8 +18,8 @@ libraryDependencies ++= Seq(
   "scalajs-react-interface" %%% "mobile"                  % versions.sri,
   "scalajs-react-interface" %%% "universal"               % versions.sri,
   "scalajs-react-interface" %%% "vector-icons"            % versions.sri,
-  "scalajs-react-interface" %%% "platform-config-ios"     % versions.sri % ios,
-  "scalajs-react-interface" %%% "platform-config-android" % versions.sri % android,
+  "scalajs-react-interface" %%% "platform-config-ios"     % versions.sri % IOS,
+  "scalajs-react-interface" %%% "platform-config-android" % versions.sri % Android,
   "scalajs-react-interface" %%% "navigation"              % versions.sri
 )
 
